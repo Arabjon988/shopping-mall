@@ -1,14 +1,30 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // import app.css file
 import "./App.css";
 
-import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
 
 import Context from "./context/Context";
 import AllRoutes from "./AllRoutes";
 
 function App() {
+  const [user, setUser] = useState({
+    fullName: null,
+    password: null,
+  })
+ 
+  const contextValue = {
+    user,
+    setUser
+  };
+
+  if(user.name !== null && user.password !== null){
+    localStorage.setItem('AUTH', true);
+    localStorage.setItem('fullName', user.fullName);
+  }
+  else{
+    localStorage.removeItem('AUTH');
+
+  }
   const [darkMode, setDarkMode] = useState(true);
 
   const [productsMany, setProductsMany] = useState([]);
@@ -25,7 +41,7 @@ function App() {
   };
   return (
   
-      <Context.Provider value={(products, productsMany)}>
+      <Context.Provider value={(products, productsMany, contextValue)}>
         <div className="App">
           <AllRoutes />
         </div>

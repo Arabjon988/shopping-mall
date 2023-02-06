@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 
 // import components
-import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Category from "./components/productComponents/category/Category";
 import ProductList from "./components/productList/ProductList";
 import About from "./views/about/About";
+import Login from "./views/auth/Login";
 import Basket from "./views/bag/Basket";
 import Contact from "./views/contact/Contact";
 
@@ -15,10 +15,17 @@ import NoMatch from "./views/NoMatch";
 import Product from "./views/product/Product";
 
 const AllRoutes = () => {
+
+  const auth = localStorage.getItem("AUTH");
+
   return (
     <div>
       <Navbar />
-      <Routes>
+          <Routes>
+      {
+        auth ? ( 
+          <>
+
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Product />} />
@@ -28,8 +35,13 @@ const AllRoutes = () => {
 
         <Route path="/cart" element={<Basket />} />
         <Route path="*" element={<NoMatch />} />
+          </>
+        ) : (
+          <Route path="/" element={<Login />} />
+        )
+      }
+        <Route path="*" element={<NoMatch />} />
       </Routes>
-      <Footer />
     </div>
   );
 };

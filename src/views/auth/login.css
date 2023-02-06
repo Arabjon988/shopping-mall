@@ -1,0 +1,61 @@
+.login{
+    width: 100%;
+    position: relative;
+    min-height: 200px;
+    height: 300px;
+    top: 50px;
+}
+
+.login_main{
+    position: relative;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login_form{
+    padding: 20px;
+    position: relative;
+    top: 10px;
+    width: max-content;
+    border-radius: 3px;
+    border: 1px solid;
+}
+
+.login_form h1{
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+}
+
+.login_form div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login_form label{
+    margin-top: 5px;
+    color: black;
+}
+
+.login_form input{
+    padding: 3px 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+}
+
+.login_form button{
+    width: 70%;
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    height: 30px;
+}

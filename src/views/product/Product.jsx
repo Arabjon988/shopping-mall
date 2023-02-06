@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import AllProducts from '../../components/productComponents/all/AllProducts'
-import ProductList from '../../components/productList/ProductList'
+
+
 const Product = () => {
   return (
     <div className='products'>
