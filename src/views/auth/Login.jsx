@@ -51,7 +51,7 @@ const Login = () => {
                 id="email"
                 placeholder="..."
                 className=""
-                readOnly
+                required
                 min='6'
               />
             </div>
