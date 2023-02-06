@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { CartProvider } from "react-use-cart";
 // import app.css file
 import "./App.css";
 
@@ -25,13 +24,12 @@ function App() {
     setDarkMode,
   };
   return (
-    <CartProvider>
+  
       <Context.Provider value={(products, productsMany)}>
         <div className="App">
           <AllRoutes />
         </div>
       </Context.Provider>
-    </CartProvider>
   );
 }
 

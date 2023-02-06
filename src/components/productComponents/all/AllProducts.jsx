@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axiosClient from "../../../api/axiosClient";
 
 import "./allProducts.css";
@@ -24,7 +25,7 @@ const AllProducts = () => {
           <div className="product_item" key={item.id}>
             <img src={item.image} alt="rasmlar" className="product_item_img" width="100px" />
             <p className="product_item_title">{item.title}</p>
-            <button className="product_item_btn" onSubmit={onSubmit}>Show</button>
+            <Link to={`/product/${item.id}`} className="product_item_btn" >Show</Link>
           </div>
         ))}
       </div>

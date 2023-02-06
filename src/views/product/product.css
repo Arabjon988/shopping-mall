@@ -1,6 +1,11 @@
 .products{
+    
     width: 100%;
     position: relative;
+}
+
+.products_main{
+    position: absolute;
 }
 
 .products_main_category{

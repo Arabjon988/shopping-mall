@@ -1,13 +1,15 @@
 .navbar{
     width: 100%;
-    position: relative;
-    height: 40px;
+    height: 50px;
+    z-index: 5;
+    position: fixed;
+    background-color: var(--white);
 }
 
 .nav_main{
+    position: relative;
     align-items: center;
     width: 100%;
-    position: fixed;
     display: flex;
     justify-content: space-between;
 }

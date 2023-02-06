@@ -1,28 +1,46 @@
 import { useCart } from "react-use-cart";
+import ProductList from "../../components/productList/ProductList";
 
 import "./bag.css";
 
 const Basket = () => {
+
+  const {
+    items,
+    totalUniqueItems,
+    totalItems,
+    cartTotal,
+    removeItem,
+    updateItemQuantity,
+    emptyCart
+  } = useCart();
+
+  console.log(totalItems);
+
   return (
     <div className=" container cart">
       <div className="cart_main">
         <div className="cart_items">
-          <h1 className="cart_items_title">Your cart is empty</h1>
-          <div className="cart_item">
-            <img src='' className="cart_item_img" alt="logoo" />
+          <h1 className="cart_items_title">Your {totalUniqueItems}  || <button className="" onClick={()=>emptyCart()}>clear</button> </h1>
+          {items.map((item) => (
+          <div className="cart_item" key={item.id}>
+
+            <img src={item.image} className="cart_item_img" alt="logoo" />
             <div className="cart_item_info">
-              <h3 className="cart_item_title">hello</h3>
-              <p className="cart_item_text">Lorem ipsum dolor sit amet.</p>
+              <h3 className="cart_item_title" >{item.title}</h3>
+              <p className="cart_item_text" >{item.description}</p>
             </div>
             <div className="cart_item_shop">
-              <h3 className="cart_item_shop_title">This product have 1</h3>
+              <h3 className="cart_item_shop_title">This product have {item.quantity}</h3>
               <div className="cart_item_shop_crements">
                 <button className="cart_item_shop_crement">+</button>
                 <button className="cart_item_shop_crement">-</button>
               </div>
-              <button className="cart_item_shop_remove">remove</button>
+              <button className="cart_item_shop_remove" onClick={() => removeItem(item.id)} >Remove</button>
             </div>
           </div>
+          ))}
+       
         </div>
         <div className="total">
           <h1 className="total_title">Your cart total 0 </h1>

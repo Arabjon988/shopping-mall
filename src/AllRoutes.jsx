@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Category from "./components/productComponents/category/Category";
+import ProductList from "./components/productList/ProductList";
 import About from "./views/about/About";
 import Basket from "./views/bag/Basket";
 import Contact from "./views/contact/Contact";
@@ -23,6 +24,8 @@ const AllRoutes = () => {
         <Route path="/products" element={<Product />} />
         <Route path="/products/:category" element={<Category />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/product/:id" element={<ProductList />} />
+
         <Route path="/cart" element={<Basket />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
