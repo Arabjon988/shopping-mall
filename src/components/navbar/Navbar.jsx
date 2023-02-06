@@ -25,7 +25,7 @@ const Navbar = () => {
            <Link to='/products' > <h1 className="nav_logo_text">Venturis</h1></Link>
           </div>
           <div className="nav_links">
-            <Link to="/products">
+            <Link to="/">
               <span> Home</span>{" "}
             </Link>
             <Link to="/products">

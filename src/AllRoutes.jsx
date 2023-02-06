@@ -15,31 +15,25 @@ import NoMatch from "./views/NoMatch";
 import Product from "./views/product/Product";
 
 const AllRoutes = () => {
-
   const auth = localStorage.getItem("AUTH");
 
   return (
     <div>
       <Navbar />
-          <Routes>
-      {
-        auth ? ( 
+      <Routes>
+        {auth ? (
           <>
-
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Product />} />
-        <Route path="/products/:category" element={<Category />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/product/:id" element={<ProductList />} />
-
-        <Route path="/cart" element={<Basket />} />
-        <Route path="*" element={<NoMatch />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Product />} />
+            <Route path="/products/:category" element={<Category />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/product/:id" element={<ProductList />} />
+            <Route path="/cart" element={<Basket />} />
           </>
         ) : (
           <Route path="/" element={<Login />} />
-        )
-      }
+        )}
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </div>

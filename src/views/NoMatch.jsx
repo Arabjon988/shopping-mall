@@ -2,7 +2,7 @@ import React from 'react'
 
 const NoMatch = () => {
   return (
-    <div>Your search is not undefind </div>
+    <div className='noMatch'>This page is not undefind </div>
   )
 }
 
