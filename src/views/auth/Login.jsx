@@ -52,7 +52,7 @@ const Login = () => {
               />
             </div>
             <div>
-              <button type="submit" className="">
+              <button type="submit" className="product_item_btn">
                 Submit
               </button>
             </div>
