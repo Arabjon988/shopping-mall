@@ -1,0 +1,74 @@
+.navbar{
+    width: 100%;
+    position: relative;
+    height: 40px;
+}
+
+.nav_main{
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_logo{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_logo_text{
+    font-size: 20px;
+    color: var(--btnColor1);
+}
+
+.nav_links{
+    width: 40%;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.nav_links span{
+    color: black;
+    margin: 10px 20px;
+}
+
+.nav_links span:hover{
+    color: var(--dark);
+}
+
+.nav_btns{
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.nav_auth_btn{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--btnColor1);
+    width: max-content;
+}
+
+.nav_auth_btn button{
+    background-color: var(--white);
+    padding: 5px 10px;
+    border: none;
+}
+
+.nav_btn_icon{
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.nav_mode{
+    margin-top: 5px;
+    width: 10%;
+    min-height: 20px;
+    height: 20px;
+}

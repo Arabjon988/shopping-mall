@@ -1,0 +1,11 @@
+.products{
+    width: 100%;
+    position: relative;
+}
+
+.products_main_category{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
