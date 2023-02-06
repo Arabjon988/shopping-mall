@@ -24,7 +24,7 @@ const Login = () => {
       <div className="container">
         <div className="login_main">
           <form action="#" className="login_form" onSubmit={onSubmit}>
-          <h1>A'zo bo'lish</h1>
+          <h1>Login</h1>
             <div className="">
               <label htmlFor="name" className="">
                 Full Name
